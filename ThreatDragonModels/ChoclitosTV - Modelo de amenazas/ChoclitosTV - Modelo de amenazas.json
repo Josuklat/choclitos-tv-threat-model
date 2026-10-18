@@ -45,10 +45,10 @@
               "hasOpenThreats": false,
               "crossingFlows": [
                 "3a0e4bab-e131-4edc-b46e-b0efb2985555",
-                "471ce424-a0f1-4e42-8c01-dec94d2505ce",
                 "3ed2729d-7006-428b-952e-a8cd2151fe85",
                 "61a4b73e-1c40-491f-9f3d-2dfddccf00b4",
                 "e8bfdf94-02bb-4330-a1b6-ba72e484139a",
+                "471ce424-a0f1-4e42-8c01-dec94d2505ce",
                 "85200d8d-a581-488b-9557-f6a23d37c958"
               ],
               "containedElements": [
@@ -210,7 +210,7 @@
             },
             "attrs": {
               "label": {
-                "text": "Trust Boundary"
+                "text": "Servicio externo"
               }
             },
             "visible": true,
@@ -219,7 +219,7 @@
             "zIndex": -1,
             "data": {
               "type": "tm.BoundaryBox",
-              "name": "Trust Boundary",
+              "name": "Servicio externo",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
@@ -908,152 +908,6 @@
               "cell": "65ac8314-57e8-4733-8e09-181414e4ffa2",
               "port": "a7ae0cc7-47cd-4f84-8ccf-831763a95576"
             }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Tráfico web",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Tráfico web"
-            ],
-            "id": "c9ec73cf-af38-47a5-a212-2281cf12c4fe",
-            "source": {
-              "cell": "e1a3f277-214d-4764-b4c6-be3908dcd1b3",
-              "port": "0691e549-b62b-4469-8735-1568a69d302a"
-            },
-            "target": {
-              "cell": "dce9c9f8-e061-4da0-8e10-fa482733aa40",
-              "port": "a7ae0cc7-47cd-4f84-8ccf-831763a95576"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Tráfico filtrado",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "4a352813-cc94-4b41-b0d0-51226043cb85"
-              ]
-            },
-            "labels": [
-              "Tráfico filtrado"
-            ],
-            "id": "471ce424-a0f1-4e42-8c01-dec94d2505ce",
-            "source": {
-              "x": 714,
-              "y": 1103
-            },
-            "target": {
-              "cell": "e1a3f277-214d-4764-b4c6-be3908dcd1b3",
-              "port": "a7ae0cc7-47cd-4f84-8ccf-831763a95576"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Tráfico móvil",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Tráfico móvil"
-            ],
-            "id": "78cc8081-c1c9-4506-ae02-1ce101b841b8",
-            "source": {
-              "cell": "e1a3f277-214d-4764-b4c6-be3908dcd1b3",
-              "port": "d59e4f35-f587-4a88-bfb3-2fd99f37a9d1"
-            },
-            "target": {
-              "cell": "64c613a6-f6a4-470e-938c-42aec301db2d",
-              "port": "a7ae0cc7-47cd-4f84-8ccf-831763a95576"
-            },
-            "vertices": [
-              {
-                "x": 810,
-                "y": 1245
-              }
-            ]
           },
           {
             "shape": "flow",
@@ -2113,6 +1967,152 @@
             }
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Tráfico web\nHTTPS(443)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Tráfico web\nHTTPS(443)"
+            ],
+            "id": "c9ec73cf-af38-47a5-a212-2281cf12c4fe",
+            "source": {
+              "cell": "e1a3f277-214d-4764-b4c6-be3908dcd1b3",
+              "port": "0691e549-b62b-4469-8735-1568a69d302a"
+            },
+            "target": {
+              "cell": "dce9c9f8-e061-4da0-8e10-fa482733aa40",
+              "port": "a7ae0cc7-47cd-4f84-8ccf-831763a95576"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Tráfico móvil\nHTTPS(443)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Tráfico móvil\nHTTPS(443)"
+            ],
+            "id": "78cc8081-c1c9-4506-ae02-1ce101b841b8",
+            "source": {
+              "cell": "e1a3f277-214d-4764-b4c6-be3908dcd1b3",
+              "port": "d59e4f35-f587-4a88-bfb3-2fd99f37a9d1"
+            },
+            "target": {
+              "cell": "64c613a6-f6a4-470e-938c-42aec301db2d",
+              "port": "a7ae0cc7-47cd-4f84-8ccf-831763a95576"
+            },
+            "vertices": [
+              {
+                "x": 810,
+                "y": 1245
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Tráfico filtrado\nHTTPS(443)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "4a352813-cc94-4b41-b0d0-51226043cb85"
+              ]
+            },
+            "labels": [
+              "Tráfico filtrado\nHTTPS(443)"
+            ],
+            "id": "471ce424-a0f1-4e42-8c01-dec94d2505ce",
+            "source": {
+              "x": 714,
+              "y": 1103
+            },
+            "target": {
+              "cell": "e1a3f277-214d-4764-b4c6-be3908dcd1b3",
+              "port": "a7ae0cc7-47cd-4f84-8ccf-831763a95576"
+            }
+          },
+          {
             "position": {
               "x": 589.9999999999975,
               "y": 761
@@ -2126,8 +2126,8 @@
                 "text": "Clientes, suscriptores y visitantes\n(Web o móvil)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2224,9 +2224,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "b5aa36cd-4489-4c7c-8ee9-c6a82f0743a5",
+                  "title": "Repudio de acciones realizadas por usuarios",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation / Repudiación",
+                  "description": "Un usuario podría negar haber realizado determinadas acciones, como modificar los datos de su cuenta o gestionar una suscripción, si la plataforma no conserva registros suficientes para demostrarlo.",
+                  "mitigation": "Registrar las acciones relevantes de los usuarios, conservar los registros de auditoría y protegerlos frente a modificaciones no autorizadas.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": "10"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "repudiation": 1
+              }
             }
           },
           {
@@ -2243,8 +2261,8 @@
                 "text": "Firewall/WAF\n(anti/DDoS)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2341,12 +2359,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "3f2ef167-4786-4193-9766-40cee2e3f867",
+                  "title": "Denegación de servicio mediante ataques DDoS",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Denial of service / Denegación de servicio",
+                  "description": "Un atacante podría saturar la plataforma con un gran volumen de peticiones, provocando la indisponibilidad del servicio para los usuarios legítimos.",
+                  "mitigation": "Configurar protección anti-DDoS, limitar la frecuencia de peticiones (rate limiting) y monitorizar el tráfico para detectar y bloquear patrones anómalos.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": "20"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -2363,8 +2403,8 @@
                 "text": "Frontend Web\n(React/Nginx)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2461,12 +2501,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "e85fa16c-ff04-4157-a4ea-269dc541a389",
+                  "title": "Acceso no autorizado a través del Frontend Web",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Elevation of privilege / Elevación de privilegios",
+                  "description": "Un atacante podría aprovechar una vulnerabilidad en la aplicación web para acceder a funciones o información que deberían estar restringidas.",
+                  "mitigation": "Validar las entradas, aplicar controles de autorización en el servidor, mantener React y Nginx actualizados y realizar pruebas de seguridad antes de publicar la plataforma.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": "20"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -2483,8 +2545,8 @@
                 "text": "Mobile API\n(IOS/Android)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2581,12 +2643,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "d8305349-cc53-42f3-a907-acb801d8cf8a",
+                  "title": "Acceso no autorizado a datos de otros usuarios",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Elevation of privilege / Elevación de privilegios",
+                  "description": "Un atacante podría manipular las peticiones de la API móvil para acceder a información o funciones de otros usuarios sin autorización.",
+                  "mitigation": "Validar los permisos en el servidor para cada petición, comprobar que cada usuario solo acceda a sus propios datos y aplicar autenticación segura mediante tokens.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": "20"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -2603,8 +2687,8 @@
                 "text": "Balanceador\nHAProxy/Nginx"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2701,12 +2785,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "5956335a-a908-45d9-86ab-1d195c3aa256",
+                  "title": "Fallo de balanceador y pérdida de disponibilidad",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service / Denegación de servicio",
+                  "description": "Una configuración incorrecta o un fallo del balanceador podría impedir la distribución de las peticiones entre los servidores, provocando interrupciones o la no disponibilidad del servicio.",
+                  "mitigation": "Configurar un balanceador redundante, realizar comprobaciones de estado (health checks) de los servidores y monitorizar su disponibilidad.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "15"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -2723,8 +2829,8 @@
                 "text": "Pasarela de Pagos\n(Stripe/PayPal)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2821,12 +2927,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "adc99d3d-9920-4eda-a942-6221b8f3dc92",
+                  "title": "Manipulación de notificaciones de pago",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering / Manipulación",
+                  "description": "Un atacante podría falsificar o manipular las notificaciones de pago para simular una transacción correcta y obtener una suscripción sin haber realizado el pago.",
+                  "mitigation": "Verificar el estado del pago directamente con la pasarela y no activar suscripciones hasta confirmar que la transacción se ha completado correctamente.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": "20"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -2843,8 +2971,8 @@
                 "text": "Catalog Service\n(video y series)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2941,12 +3069,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "6c54259f-2d61-4cf8-9566-6b6420fd6974",
+                  "title": "Modificación no autorizada del catálogo",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering / Manipulación",
+                  "description": "Un atacante podría modificar la información de las películas y series, por ejemplo, cambiando sus datos o haciendo que aparezca contenido incorrecto en la plataforma.",
+                  "mitigation": "Limitar quién puede modificar el catálogo, comprobar los permisos antes de guardar los cambios y mantener un registro de las modificaciones realizadas.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": "15"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -2963,8 +3113,8 @@
                 "text": "Streaming Service\n(contenido)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3061,12 +3211,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "32f775ca-a0e2-435d-b525-037078e10d2f",
+                  "title": "Interrupción del servicio de streaming",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service / Denegación de servicio",
+                  "description": "Un fallo en el servicio de streaming podría impedir que los usuarios reproduzcan vídeos y series durante un tiempo.",
+                  "mitigation": "Monitorizar el servicio, controlar los errores de reproducción y disponer de mecanismos para recuperar el servicio si se produce un fallo.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": "10"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -3083,8 +3255,8 @@
                 "text": "Subscription\nService"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3181,12 +3353,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "50d53812-fd1e-40cb-a0ee-5280d21121dc",
+                  "title": "Modificación no autorizada de suscripciones",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering / Manipulación",
+                  "description": "Un atacante podría intentar modificar el estado de una suscripción para mantener el acceso a la plataforma sin tener una suscripción válida.",
+                  "mitigation": "Limitar quién puede modificar las suscripciones, comprobar los permisos en el servidor y registrar los cambios realizados.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": "12"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -3203,8 +3397,8 @@
                 "text": "User Service\n(Gestión usuarios)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3301,12 +3495,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "7d302fd5-78db-4c82-afeb-5713ec03b250",
+                  "title": "Exposición de datos personales de usuarios",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure / Brecha de información",
+                  "description": "Un fallo en los permisos del servicio podría permitir que un usuario acceda a datos personales de otros usuarios sin autorización.",
+                  "mitigation": "Comprobar los permisos antes de mostrar los datos, limitar el acceso a la información según el tipo de usuario y evitar que se expongan datos que no sean necesarios.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": "12"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -3323,8 +3539,8 @@
                 "text": "Auth Service\n(Autenticación\ny autorización)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3421,12 +3637,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "a314acc8-0d03-4fae-8049-0f4d237fd23e",
+                  "title": "Robo de credenciales de acceso",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Un atacante podría conseguir las credenciales de un usuario y utilizarlas para acceder a su cuenta sin permiso.",
+                  "mitigation": "Activar la autenticación multifactor (MFA), proteger las credenciales y limitar los intentos de inicio de sesión para evitar accesos no autorizados.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": "16"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -3443,8 +3681,8 @@
                 "text": "API Gateway\n(Kong/AWS)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3541,12 +3779,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "35360d5e-1b36-478f-bb61-486bdd404f69",
+                  "title": "Acceso a servicios sin los permisos necesarios",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Elevation of privilege / Elevación de privilegios",
+                  "description": "Un atacante podría aprovechar un fallo en el API Gateway para acceder a servicios o funciones a los que no debería tener acceso.",
+                  "mitigation": "Revisar los permisos de acceso, comprobar las peticiones que llegan al API Gateway y mantenerlo actualizado para evitar posibles vulnerabilidades.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": "20"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -3664,6 +3924,13 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -3680,8 +3947,8 @@
                 "text": "S3/MinlO\n(video, miniaturas y\n metadatos)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3778,9 +4045,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "38fec3c5-417c-412f-accf-cade77a86d97",
+                  "title": "Acceso no autorizado a los archivos almacenados",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Un atacante podría hacerse pasar por un usuario o servicio autorizado para acceder a vídeos y archivos almacenados que deberían estar protegidos.",
+                  "mitigation": "Comprobar la identidad de los servicios que acceden al almacenamiento, limitar los permisos y evitar que los archivos privados sean públicos.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": "10"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 3,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -3797,8 +4082,8 @@
                 "text": "Redis\n(sesiones y caché)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3895,9 +4180,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "6a1c4f89-07e9-4145-a0f4-dc340499d863",
+                  "title": "Acceso no autorizado a las sesiones",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Un atacante podría conseguir el identificador de sesión de un usuario y utilizarlo para acceder a la plataforma con su cuenta.",
+                  "mitigation": "Proteger los identificadores de sesión, limitar el acceso a Redis y configurar una autenticación segura para los servicios que se conectan.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": "10"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -3914,8 +4217,8 @@
                 "text": "PostgreSQL\n(usuarios y\nsuscripciones)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -4012,9 +4315,40 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "6170eed2-63d4-41c7-8b7a-f1b6e64d86d6",
+                  "title": "Acceso no autorizado a la base de datos",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Un atacante podría acceder a los datos de usuarios y suscripciones si consigue acceder a la base de datos sin los permisos necesarios.",
+                  "mitigation": "Limitar el acceso a la base de datos, utilizar credenciales seguras y permitir conexiones únicamente desde los servicios autorizados.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": "10"
+                },
+                {
+                  "id": "620d20f0-7857-4a7a-b89a-299e4dd19111",
+                  "title": "Exposición de datos sensibles de usuarios",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing / Spoofing",
+                  "description": "n atacante podría acceder a la base de datos y obtener información personal de los usuarios y datos de sus suscripciones, comprometiendo la privacidad de la plataforma.",
+                  "mitigation": "Limitar el acceso a la base de datos a los servicios autorizados, cifrar la información sensible y revisar los permisos de acceso.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": "20"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 3,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -4391,8 +4725,8 @@
                 "text": "Equipo de\nsoporte"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -4489,9 +4823,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "c3ae7d53-33b8-48fd-baf0-2439cae5e43c",
+                  "title": "Suplantación del equipo de soporte",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Un atacante podría hacerse pasar por un miembro del equipo de soporte para intentar acceder a información de los usuarios.",
+                  "mitigation": "Aplicar autenticación multifactor, verificar la identidad del personal y controlar los permisos de acceso.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "20"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -4921,8 +5273,8 @@
                 "text": "CDN de Contenidos\n(Akamai/Cloudflare)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -5019,12 +5371,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "31cc6973-d997-4677-869c-527875c4ebe6",
+                  "title": "Exposición de contenidos por configuración incorrecta",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure / Brecha de información",
+                  "description": "Una configuración incorrecta del CDN podría permitir el acceso no autorizado a contenidos privados o recursos que deberían estar restringidos a determinados usuarios.",
+                  "mitigation": "Configurar correctamente los permisos de acceso y la caché, proteger los contenidos privados mediante autenticación y revisar periódicamente las reglas de seguridad del CDN.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": "15"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -5086,6 +5460,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 18
   }
 }
