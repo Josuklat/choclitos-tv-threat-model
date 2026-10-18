@@ -35,8 +35,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "55bd73e2-4356-4ed2-bbe0-2e78a9a46ba0",
             "zIndex": -1,
+            "id": "55bd73e2-4356-4ed2-bbe0-2e78a9a46ba0",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "DMZ\n",
@@ -55,7 +55,7 @@
           {
             "position": {
               "x": 359.9999999999983,
-              "y": 60.000000000000455
+              "y": 90
             },
             "size": {
               "width": 180,
@@ -68,8 +68,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "15161e80-c88c-4f30-8c24-fb2ec9e93d98",
             "zIndex": -1,
+            "id": "15161e80-c88c-4f30-8c24-fb2ec9e93d98",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Servicios",
@@ -77,7 +77,9 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "9bd3af81-611e-44e5-89e5-51679fd32fbd"
+                "9bd3af81-611e-44e5-89e5-51679fd32fbd",
+                "6423ef40-87ac-4302-a931-be59fdb61b7d",
+                "344fea34-5b3b-409d-a6ee-5bf72f242d46"
               ],
               "containedElements": [
                 "4e012036-7cb7-4116-9a40-c44c24262240",
@@ -87,7 +89,7 @@
           },
           {
             "position": {
-              "x": 608.749999999999,
+              "x": 604.999999999999,
               "y": 60.000000000000455
             },
             "size": {
@@ -101,8 +103,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "3ee314d6-8421-47db-b04b-130f694fb327",
             "zIndex": -1,
+            "id": "3ee314d6-8421-47db-b04b-130f694fb327",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Almacenamiento",
@@ -110,8 +112,9 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "ad23624a-45d8-43a7-8831-387b51223ace",
-                "4910b63e-7841-4f75-a15a-8ad863e17d2c"
+                "4910b63e-7841-4f75-a15a-8ad863e17d2c",
+                "344fea34-5b3b-409d-a6ee-5bf72f242d46",
+                "1416f728-24f3-4d14-8f6c-28dc5416537f"
               ],
               "containedElements": [
                 "8b862ec3-35d3-4162-929d-1dfba2602b40",
@@ -136,8 +139,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "cb26557f-ed65-4b09-888d-36dfee856317",
             "zIndex": -1,
+            "id": "cb26557f-ed65-4b09-888d-36dfee856317",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Administración",
@@ -172,6 +175,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -255,7 +259,6 @@
               ]
             },
             "id": "b427b24e-0ba2-4a57-95c5-9a072dc71289",
-            "zIndex": 1,
             "data": {
               "type": "tm.Process",
               "name": "Auth Mobile/Web",
@@ -292,6 +295,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -375,7 +379,6 @@
               ]
             },
             "id": "50c6478a-726b-4a15-a9a3-93e9b78eed22",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "Cliente",
@@ -517,7 +520,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Registro/Comprobación",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -533,15 +536,124 @@
               ]
             },
             "labels": [
-              "Data Flow"
+              "Registro/Comprobación"
             ],
-            "id": "ad23624a-45d8-43a7-8831-387b51223ace",
+            "id": "4910b63e-7841-4f75-a15a-8ad863e17d2c",
             "source": {
-              "x": 489,
-              "y": 460
+              "x": 495,
+              "y": 565
             },
             "target": {
               "cell": "8b862ec3-35d3-4162-929d-1dfba2602b40",
+              "port": "bd6926d7-4198-426e-8ad2-554851f0f5ba"
+            },
+            "vertices": [
+              {
+                "x": 570,
+                "y": 590
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Visualización de contenido",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "15161e80-c88c-4f30-8c24-fb2ec9e93d98"
+              ]
+            },
+            "labels": [
+              "Visualización de contenido"
+            ],
+            "id": "6423ef40-87ac-4302-a931-be59fdb61b7d",
+            "source": {
+              "x": 240,
+              "y": 270
+            },
+            "target": {
+              "cell": "d0db89f3-0ec3-4306-8953-c8534f1bfc78",
+              "port": "77d83add-6e55-4ee4-aa04-21476fbb0a57"
+            },
+            "vertices": [
+              {
+                "x": 310,
+                "y": 220
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Almacenamiento de tokens",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "15161e80-c88c-4f30-8c24-fb2ec9e93d98",
+                "3ee314d6-8421-47db-b04b-130f694fb327"
+              ]
+            },
+            "labels": [
+              "Almacenamiento de tokens"
+            ],
+            "id": "344fea34-5b3b-409d-a6ee-5bf72f242d46",
+            "source": {
+              "cell": "4e012036-7cb7-4116-9a40-c44c24262240",
+              "port": "9035fb4f-1160-4962-a61c-004e152856d0"
+            },
+            "target": {
+              "cell": "331b1d49-4614-4e84-ac02-7fb207ce392a",
               "port": "bd6926d7-4198-426e-8ad2-554851f0f5ba"
             }
           },
@@ -565,7 +677,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Consultar",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -581,23 +693,17 @@
               ]
             },
             "labels": [
-              "Data Flow"
+              "Consultar"
             ],
-            "id": "4910b63e-7841-4f75-a15a-8ad863e17d2c",
+            "id": "1416f728-24f3-4d14-8f6c-28dc5416537f",
             "source": {
-              "x": 495,
-              "y": 565
+              "x": 517,
+              "y": 160
             },
             "target": {
-              "cell": "8b862ec3-35d3-4162-929d-1dfba2602b40",
+              "cell": "0faadd7c-4b6f-4dbf-a402-6992e6dca56e",
               "port": "bd6926d7-4198-426e-8ad2-554851f0f5ba"
-            },
-            "vertices": [
-              {
-                "x": 570,
-                "y": 565
-              }
-            ]
+            }
           },
           {
             "position": {
@@ -620,6 +726,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -703,7 +810,6 @@
               ]
             },
             "id": "2d46da9d-37dc-4cd7-a329-76d62869b208",
-            "zIndex": 11,
             "data": {
               "type": "tm.Actor",
               "name": "Administradores IT",
@@ -737,6 +843,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -820,7 +927,6 @@
               ]
             },
             "id": "79250170-793a-4d9d-904e-e66c69ae6dbf",
-            "zIndex": 12,
             "data": {
               "type": "tm.Actor",
               "name": "Helpdesk",
@@ -851,6 +957,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -934,7 +1041,6 @@
               ]
             },
             "id": "9e3458de-0820-4df1-92be-65cb846d7f0f",
-            "zIndex": 13,
             "data": {
               "type": "tm.Actor",
               "name": "Actor",
@@ -968,6 +1074,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 14,
             "ports": {
               "groups": {
                 "top": {
@@ -1051,7 +1158,6 @@
               ]
             },
             "id": "44e9348d-066d-47c8-9bd0-4fe4b6334578",
-            "zIndex": 14,
             "data": {
               "type": "tm.Actor",
               "name": "Desarrolladores",
@@ -1085,6 +1191,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 15,
             "ports": {
               "groups": {
                 "top": {
@@ -1168,7 +1275,6 @@
               ]
             },
             "id": "4e012036-7cb7-4116-9a40-c44c24262240",
-            "zIndex": 15,
             "data": {
               "type": "tm.Process",
               "name": "Gestión de acceso",
@@ -1208,6 +1314,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 16,
             "ports": {
               "groups": {
                 "top": {
@@ -1291,7 +1398,6 @@
               ]
             },
             "id": "8b862ec3-35d3-4162-929d-1dfba2602b40",
-            "zIndex": 16,
             "data": {
               "type": "tm.Store",
               "name": "PostgreSQL",
@@ -1329,6 +1435,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 17,
             "ports": {
               "groups": {
                 "top": {
@@ -1412,7 +1519,6 @@
               ]
             },
             "id": "d0db89f3-0ec3-4306-8953-c8534f1bfc78",
-            "zIndex": 17,
             "data": {
               "type": "tm.Process",
               "name": "Servicio streaming",
@@ -1452,6 +1558,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 18,
             "ports": {
               "groups": {
                 "top": {
@@ -1535,7 +1642,6 @@
               ]
             },
             "id": "0faadd7c-4b6f-4dbf-a402-6992e6dca56e",
-            "zIndex": 18,
             "data": {
               "type": "tm.Store",
               "name": "S3 Bucket",
@@ -1554,8 +1660,8 @@
           },
           {
             "position": {
-              "x": 640,
-              "y": 290
+              "x": 643.749999999999,
+              "y": 305.00000000000045
             },
             "size": {
               "width": 120,
@@ -1576,6 +1682,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 19,
             "ports": {
               "groups": {
                 "top": {
@@ -1659,7 +1766,6 @@
               ]
             },
             "id": "331b1d49-4614-4e84-ac02-7fb207ce392a",
-            "zIndex": 19,
             "data": {
               "type": "tm.Store",
               "name": "Redis Cache",
@@ -1697,6 +1803,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 20,
             "ports": {
               "groups": {
                 "top": {
@@ -1780,7 +1887,6 @@
               ]
             },
             "id": "f797ff78-c65d-418a-ae62-f2b03b317adf",
-            "zIndex": 20,
             "data": {
               "type": "tm.Process",
               "name": "Gestión y monitorización",
@@ -1817,6 +1923,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 21,
             "ports": {
               "groups": {
                 "top": {
@@ -1900,7 +2007,6 @@
               ]
             },
             "id": "fb0127a3-b6a4-41a8-b8c6-2d2a6e6b755d",
-            "zIndex": 21,
             "data": {
               "type": "tm.Process",
               "name": "CI/CD",
@@ -1915,6 +2021,58 @@
               "privilegeLevel": "",
               "threats": []
             }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 22,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Autenticación",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Autenticación"
+            ],
+            "id": "4064dedb-f793-4c1b-95a4-b0a3d68f5aee",
+            "source": {
+              "x": 510,
+              "y": 480
+            },
+            "target": {
+              "x": 617,
+              "y": 545
+            },
+            "vertices": [
+              {
+                "x": 560,
+                "y": 490
+              }
+            ]
           }
         ]
       }
