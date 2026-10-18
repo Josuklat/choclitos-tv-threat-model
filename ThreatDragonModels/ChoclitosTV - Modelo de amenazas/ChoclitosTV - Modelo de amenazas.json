@@ -3655,10 +3655,23 @@
                   "new": false,
                   "number": 14,
                   "score": "16"
+                },
+                {
+                  "id": "6666e40f-a202-4b03-84df-a3adf3001993",
+                  "title": "Compromiso del sistema de autenticación",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Un atacante podría comprometer el sistema de autenticación y aprovecharlo para acceder a diferentes cuentas de usuarios, poniendo en riesgo la seguridad de la plataforma.",
+                  "mitigation": "Restringir el acceso al servicio, mantenerlo actualizado, revisar los registros de actividad y comprobar que la autenticación y los permisos funcionen correctamente.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 31,
+                  "score": "20"
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
@@ -3823,8 +3836,8 @@
                 "text": "Backup Server\n(copias de seguridad)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3921,16 +3934,40 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
+              "threats": [
+                {
+                  "id": "32c9254f-d737-477c-b14f-4b9eb171a3d3",
+                  "title": "Fallo en las copias de seguridad",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation / Repudiación",
+                  "description": "Un error en las copias de seguridad podría impedir recuperar los datos si se produce un fallo en la plataforma.",
+                  "mitigation": "Comprobar que las copias se realizan correctamente, revisar los registros y hacer pruebas de recuperación periódicas.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": "10"
+                },
+                {
+                  "id": "e1ed04d4-8738-4e03-8198-b46a8cb44dca",
+                  "title": "Pérdida de las copias de seguridad",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Un atacante podría acceder al servidor de copias y borrar o alterar los respaldos, dificultando la recuperación de los datos tras un incidente grave.",
+                  "mitigation": "Restringir el acceso al servidor, proteger las copias contra modificaciones y borrados, y mantener una copia aislada o inmutable.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": "20"
+                }
               ],
-              "name": null
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 1
+              }
             }
           },
           {
@@ -4365,8 +4402,8 @@
                 "text": "Repositorio\nde código\n(GitLab/GitHub)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -4463,12 +4500,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "f86af6a3-6063-44e0-9faa-02dc1cdd1deb",
+                  "title": "Acceso no autorizado al repositorio",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Un atacante podría acceder al repositorio y consultar o modificar el código de la plataforma, lo que podría introducir vulnerabilidades en el sistema.",
+                  "mitigation": "Limitar el acceso al repositorio a los desarrolladores autorizados, activar la autenticación multifactor y revisar los permisos de las cuentas.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 21,
+                  "score": "15"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -4485,8 +4544,8 @@
                 "text": "Monitorización\ny logs\n(Prometheus/Grafana\n/ELK)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -4583,12 +4642,47 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "3bd846b0-e159-4b54-916f-e6eca6a6f6f4",
+                  "title": "Modificación no autorizada de los registros",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation / Repudiación",
+                  "description": "Un atacante podría modificar o borrar registros para ocultar acciones realizadas en la plataforma y dificultar la investigación de un incidente.",
+                  "mitigation": "Restringir los permisos de los registros, guardar copias de los logs y evitar que puedan modificarse o borrarse sin autorización.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": "10"
+                },
+                {
+                  "id": "c48d10af-7973-40b2-bdde-50164b534b11",
+                  "title": "Interrupción de la monitorización",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service / Denegación de servicio",
+                  "description": "Si la monitorización deja de funcionar, los administradores podrían no detectar a tiempo un ataque o un fallo importante en la plataforma.",
+                  "mitigation": "Monitorizar el estado de las herramientas, generar alertas si dejan de funcionar y disponer de mecanismos para recuperar el servicio.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 25,
+                  "score": "15"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -4605,8 +4699,8 @@
                 "text": "Consola de \nadministración\n(Gestión de \ninfrastructura)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -4703,12 +4797,47 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "e96f0cdf-6919-4524-8090-7c26f5a68e41",
+                  "title": "Acceso no autorizado a la consola",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Un atacante podría intentar acceder a la consola para controlar parte de la infraestructura si consigue superar los controles de acceso.",
+                  "mitigation": "Permitir el acceso solo a los administradores autorizados mediante VPN, activar la autenticación multifactor y limitar los permisos según las funciones de cada administrador.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": "10"
+                },
+                {
+                  "id": "1e39e03d-dd94-4fed-b36e-a91f84121852",
+                  "title": "Modificación incorrecta de la configuración",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering / Manipulación",
+                  "description": "Un cambio incorrecto en la configuración de la infraestructura podría provocar fallos y dejar algunos servicios de la plataforma temporalmente sin funcionar.",
+                  "mitigation": "Revisar los cambios antes de aplicarlos, guardar copias de las configuraciones y disponer de un procedimiento para volver a una configuración anterior.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 27,
+                  "score": "15"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -4860,8 +4989,8 @@
                 "text": "VPN\n(Acceso seguro)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -4958,12 +5087,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "98e16145-177a-4410-b213-76291b2203e8",
+                  "title": "Pérdida de acceso mediante VPN",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service / Denegación de servicio",
+                  "description": "Un fallo en la VPN podría impedir que los administradores accedan a la infraestructura y realicen tareas de mantenimiento cuando sea necesario.",
+                  "mitigation": "Monitorizar la conexión, mantener la VPN actualizada y disponer de un procedimiento alternativo seguro para recuperar el acceso.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
+                  "score": "10"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -4980,8 +5131,8 @@
                 "text": "Equipo de desarrollo"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -5078,14 +5229,45 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "8d058f60-021e-40ee-a814-f94dec260046",
+                  "title": "Exposición del código fuente",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Alguien podría conseguir acceso a una cuenta de desarrollo y consultar el código fuente de la plataforma sin autorización.",
+                  "mitigation": "Activar la autenticación multifactor, utilizar contraseñas seguras y limitar el acceso al repositorio a los desarrolladores autorizados.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": "10"
+                },
+                {
+                  "id": "4832e384-7d1f-49be-b169-39e009108eca",
+                  "title": "Modificación maliciosa del código fuente",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Un atacante podría comprometer la cuenta de un desarrollador y modificar el código para introducir vulnerabilidades que afecten al funcionamiento o la seguridad de la plataforma.",
+                  "mitigation": "Revisar los cambios antes de incorporarlos al proyecto, exigir aprobaciones para las modificaciones y proteger las cuentas de desarrollo con autenticación multifactor.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": "20"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 2,
+                "repudiation": 0
+              }
             }
           },
           {
             "position": {
-              "x": 1599,
+              "x": 1590,
               "y": 2710
             },
             "size": {
@@ -5097,8 +5279,8 @@
                 "text": "Administradores \nTI / DevOps"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -5195,9 +5377,40 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "eb514012-d389-4a48-858b-bb13b3506d60",
+                  "title": "Configuración incorrecta de la infraestructura",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Un error al configurar los sistemas podría provocar fallos en los servicios o dejar alguna parte de la plataforma expuesta a riesgos de seguridad.",
+                  "mitigation": "Revisar los cambios antes de aplicarlos, limitar los permisos de cada administrador y comprobar que la configuración sea correcta.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 29,
+                  "score": "10"
+                },
+                {
+                  "id": "63ce8adc-fdcf-40a8-8c23-06c72555509d",
+                  "title": "Uso indebido de permisos administrativos",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Repudiation / Repudiación",
+                  "description": "Si una cuenta de administrador se ve comprometida, un atacante podría utilizar sus permisos para acceder a los sistemas internos y realizar cambios importantes en la plataforma.",
+                  "mitigation": "Activar la autenticación multifactor, asignar solo los permisos necesarios y registrar las acciones realizadas por los administradores.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 30,
+                  "score": "15"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 1
+              }
             }
           },
           {
@@ -5460,6 +5673,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 18
+    "threatTop": 31
   }
 }
