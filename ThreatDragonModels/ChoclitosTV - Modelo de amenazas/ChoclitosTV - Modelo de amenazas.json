@@ -30,7 +30,7 @@
             },
             "attrs": {
               "label": {
-                "text": "(Capa 1) DMZ Zona publica"
+                "text": "Capa 1- DMZ Zona publica"
               }
             },
             "visible": true,
@@ -39,7 +39,7 @@
             "id": "4a352813-cc94-4b41-b0d0-51226043cb85",
             "data": {
               "type": "tm.BoundaryBox",
-              "name": "(Capa 1) DMZ Zona publica",
+              "name": "Capa 1- DMZ Zona publica",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
@@ -70,7 +70,7 @@
             },
             "attrs": {
               "label": {
-                "text": "Trust Boundary"
+                "text": "Capa 2 - Apliacación"
               }
             },
             "visible": true,
@@ -79,7 +79,7 @@
             "id": "64bd4f99-fb59-46c3-b3ec-7bda62850d64",
             "data": {
               "type": "tm.BoundaryBox",
-              "name": "Trust Boundary",
+              "name": "Capa 2 - Apliacación",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
@@ -121,7 +121,7 @@
             },
             "attrs": {
               "label": {
-                "text": "Trust Boundary"
+                "text": "Capa 3 - Datos"
               }
             },
             "visible": true,
@@ -130,7 +130,7 @@
             "id": "aa1f4452-a232-402f-a8de-b4b3a58280c2",
             "data": {
               "type": "tm.BoundaryBox",
-              "name": "Trust Boundary",
+              "name": "Capa 3 - Datos",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
@@ -172,7 +172,7 @@
             },
             "attrs": {
               "label": {
-                "text": "Trust Boundary"
+                "text": "Capa 4 - Administración"
               }
             },
             "visible": true,
@@ -181,7 +181,7 @@
             "id": "26be28f9-5556-450c-9571-f557eaab0b66",
             "data": {
               "type": "tm.BoundaryBox",
-              "name": "Trust Boundary",
+              "name": "Capa 4 - Administración",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
@@ -215,8 +215,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "b626fb50-7b6b-4d24-a3e5-ed07bbc4c946",
             "zIndex": -1,
+            "id": "b626fb50-7b6b-4d24-a3e5-ed07bbc4c946",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Servicio externo",
@@ -5493,6 +5493,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 54,
             "ports": {
               "groups": {
                 "top": {
@@ -5576,7 +5577,6 @@
               ]
             },
             "id": "22dd3c4d-2717-400d-8b93-d3cb96f49b8b",
-            "zIndex": 54,
             "data": {
               "type": "tm.Process",
               "name": "CDN de Contenidos\n(Akamai/Cloudflare)",
